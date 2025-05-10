@@ -17,7 +17,10 @@ public class FloatingAnimation : MonoBehaviour
     void Update()
     {
         // con la funzione seno si ottiene un movimento ondeggiante (vedi slides)
-        transform.position = _startPosition + delta * Mathf.Sin(speed * Time.time) * direction;
+        float xPosition = transform.position.x;
+        Vector3 newPosition = _startPosition + delta * Mathf.Sin(speed * Time.time) * direction;
+        newPosition.x = xPosition; //mantiene la posizione x originale
+        transform.position = newPosition;
 
         //_startPosition ->> dal punto in cui si trova l'oggetto
         //delta ->> ampiezza del movimento
