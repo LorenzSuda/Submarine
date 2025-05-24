@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1962761889953027142}
   - component: {fileID: 2583708198428068131}
   - component: {fileID: 2905545833646015202}
+  - component: {fileID: 4774396650220778735}
   m_Layer: 0
   m_Name: BoxCrate
   m_TagString: Box
@@ -102,9 +103,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4774396650220778735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7724070899966428869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132869ef35be55246a4e69c66e060455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 7724070899966428869}
+  spawnOnDestroy: {fileID: 975524777007877934, guid: 926be76968ee575478a4687d5faabc96, type: 3}
+  maxInstances: 5
+  randomDelta: {x: 0, y: 0, z: 0}

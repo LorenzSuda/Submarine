@@ -26,6 +26,7 @@ Material:
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords:
   - _EMISSIVE
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -33,9 +34,10 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: Opaque
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -44,6 +46,10 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 1
     - _Cull: 2
+    - _DstBlend: 10
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _ZWrite: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

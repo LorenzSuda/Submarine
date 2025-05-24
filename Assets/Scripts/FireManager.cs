@@ -27,9 +27,8 @@ public class FireManager : MonoBehaviour
                 GameObject bullet = Instantiate(_bulletPrefab, firePositions[i].position, _bulletPrefab.transform.rotation * root.rotation); // instanzia il proiettile ***
                 Rigidbody rb = bullet.GetComponent<Rigidbody>(); // ottieni il componente Rigidbody del proiettile
                 rb.AddRelativeForce(Vector3.down * firePower, fireMode);//or Vector3.down 
-                                        //applica una forza al RB del proiettile in direzione del suo asse locale, del suo froward (in questo caso verso il basso)
-                                        //Ecco perch� se va nel verso opposto devi mettere Vector3.up
-                                                                      
+                //applica una forza al RB del proiettile in direzione del suo asse locale, del suo froward (in questo caso verso il basso)
+                //Ecco perché se va nel verso opposto devi mettere Vector3.up
             }
             _fireTimer = 0;
         }

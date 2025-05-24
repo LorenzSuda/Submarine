@@ -128,6 +128,7 @@ public class SubmarineManager : MonoBehaviour
             Destroy(other.gameObject);
             fuel = Mathf.Clamp(fuel - mineFuelReduction, 0, maxFuel); //sennò la levi 
             Debug.Log($"Fuel lost: {fuel}");
+            //Debug.Log($"Trigger by: {other.gameObject}", other.gameObject);
             if (fuel <= 0)
             {
                 enabled = false;
